@@ -3,23 +3,22 @@ var previousNumber = "0";
 var currentOperator = "";
 var result = 0;
 
-
 function clearScreen() {
   currentNumber = "0";
   previousNumber = "0";
   currentOperator = "";
   result = 0;
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
 
 function negateNumber() {
   currentNumber = -currentNumber;
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
 
 function calculatePercent() {
   currentNumber = currentNumber / 100;
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
 
 function addNumber(num) {
@@ -28,14 +27,17 @@ function addNumber(num) {
   } else {
     currentNumber += num.toString();
   }
+
   document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
+
+
 
 function addDecimal() {
   if (!currentNumber.includes(".")) {
     currentNumber += ".";
   }
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
 
 function addOperator(operator) {
@@ -62,6 +64,7 @@ function calculate() {
       result = currentNumber;
   }
   currentNumber = result.toLocaleString();
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
+
   console.log(result);
 };
