@@ -3,6 +3,7 @@ var previousNumber = "0";
 var currentOperator = "";
 var result = 0;
 
+
 function clearScreen() {
   currentNumber = "0";
   previousNumber = "0";
@@ -27,7 +28,7 @@ function addNumber(num) {
   } else {
     currentNumber += num.toString();
   }
-  document.getElementById("result").innerHTML = currentNumber;
+  document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 }
 
 function addDecimal() {
@@ -60,7 +61,7 @@ function calculate() {
     default:
       result = currentNumber;
   }
-  currentNumber = result.toString();
+  currentNumber = result.toLocaleString();
   document.getElementById("result").innerHTML = currentNumber;
   console.log(result);
 };
