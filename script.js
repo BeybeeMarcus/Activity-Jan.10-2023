@@ -3,6 +3,9 @@ var previousNumber = "0";
 var currentOperator = "";
 var result = 0;
 
+
+
+
 function clearScreen() {
   currentNumber = "0";
   previousNumber = "0";
@@ -62,7 +65,11 @@ function calculate() {
       break;
     default:
       result = currentNumber;
+
+    
+
   }
+
   currentNumber = result.toLocaleString();
   document.getElementById("result").innerHTML = currentNumber.toLocaleString();
 
